@@ -10,9 +10,9 @@ Original project : <https://github.com/lobehub/lobe-chat>
 
 # ☘ This project is part of my AI trio. ☘
 
-<u>**1 - 📝 Text/Chat AI generation** : [Emiguru Lobe Chat Fork](https://github.com/justUmen/Emiguru_lobe-chat) (you are here)</u>\
-2 - 🔊 Speech AI generation : [Emiguru Text To Speech](https://github.com/justUmen/Emiguru_XTTS)\
-3 - 🎨 Image AI generation : [Emiguru Comfyui custom nodes](https://github.com/justUmen/Emiguru_custom_nodes)
+<u>**1 - 📝 Text/Chat AI generation** : [Emiguru Lobe Chat Fork](https://github.com/emiguru/Emiguru_lobe-chat) (you are here)</u>\
+2 - 🔊 Speech AI generation : [Emiguru Text To Speech](https://github.com/emiguru/Emiguru_XTTS)\
+3 - 🎨 Image AI generation : [Emiguru Comfyui custom nodes](https://github.com/emiguru/Emiguru_custom_nodes)
 
 ## Changelogs :
 
