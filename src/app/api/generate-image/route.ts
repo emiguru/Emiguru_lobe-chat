@@ -9,7 +9,7 @@ const COMFYUI_URL = process.env.COMFYUI_URL || 'http://127.0.0.1:8188';
 
 async function pollForImage(timeout = 60_000) {
   const startTime = Date.now();
-  const baseImageUrl = `${COMFYUI_URL}/view?filename=output/BJORNULF_API_LAST_IMAGE.png`;
+  const baseImageUrl = `${COMFYUI_URL}/view?filename=output/EMIGURU_API_LAST_IMAGE.png`;
   let previousImageHash = null;
 
   while (Date.now() - startTime < timeout) {

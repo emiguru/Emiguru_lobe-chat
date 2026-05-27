@@ -1,4 +1,4 @@
-# 💬 Bjornulf chat v0.3, Based on lobe-chat v1.19.23 💬
+# 💬 Emiguru chat v0.3, Based on lobe-chat v1.19.23 💬
 
 Talk to several types of Ai on your local computer. (local and remote, ollama, openai, etc...)
 
@@ -6,13 +6,13 @@ Original project : <https://github.com/lobehub/lobe-chat>
 
 # Coffee : ☕☕☕☕☕ 5/5
 
-❤️❤️❤️ <https://ko-fi.com/bjornulf> ❤️❤️❤️
+❤️❤️❤️ <https://ko-fi.com/emiguru> ❤️❤️❤️
 
 # ☘ This project is part of my AI trio. ☘
 
-<u>**1 - 📝 Text/Chat AI generation** : [Bjornulf Lobe Chat Fork](https://github.com/justUmen/Bjornulf_lobe-chat) (you are here)</u>\
-2 - 🔊 Speech AI generation : [Bjornulf Text To Speech](https://github.com/justUmen/Bjornulf_XTTS)\
-3 - 🎨 Image AI generation : [Bjornulf Comfyui custom nodes](https://github.com/justUmen/Bjornulf_custom_nodes)
+<u>**1 - 📝 Text/Chat AI generation** : [Emiguru Lobe Chat Fork](https://github.com/justUmen/Emiguru_lobe-chat) (you are here)</u>\
+2 - 🔊 Speech AI generation : [Emiguru Text To Speech](https://github.com/justUmen/Emiguru_XTTS)\
+3 - 🎨 Image AI generation : [Emiguru Comfyui custom nodes](https://github.com/justUmen/Emiguru_custom_nodes)
 
 ## Changelogs :
 
@@ -44,23 +44,23 @@ If you want to use Comfyui remotely (like a phone on local network), you need to
 
 🏠 Runs entirely on your device\
 Use `xttsv2` for local text-to-speech. (You need to install it and run the server separately)\
-You need to use my fork = <https://github.com/justUmen/Bjornulf_XTTS>\
-⚠ lobe-chat and xtts should share the same folder, create a link `Bjornulf_XTTS/xtts_api_server/speakers/` to or from `Bjornulf_lobe-chat/public/bjornulf_voices/` ⚠\
+You need to use my fork = <https://github.com/justUmen/Emiguru_XTTS>\
+⚠ lobe-chat and xtts should share the same folder, create a link `Emiguru_XTTS/xtts_api_server/speakers/` to or from `Emiguru_lobe-chat/public/emiguru_voices/` ⚠\
 For multilanguage support, you can use folders with language code like `en`, `fr`, `de`, etc...\
 You can use any `.wav` custom voice sample, just replace manually the `default.wav` in the `speakers` folder.\
 Available languages :\
 `ar: 'Arabic', cs: 'Czech', de: 'German', en: 'English', es: 'Spanish', fr: 'French', hi: 'Hindi', hu: 'Hungarian', it: 'Italian', ja: 'Japanese', ko: 'Korean', nl: 'Dutch', pl: 'Polish', pt: 'Portuguese', ru: 'Russian', tr: 'Turkish', 'zh-cn': 'Chinese'`\
 Here you can download a sample with `Attenborough` voice (English so put in a folder `en`) : <https://drive.google.com/file/d/1JOSpavgN0GS2OswXbQCpqL5kYV0nSr6n/view?usp=sharing>\
 ![Background](screenshots/screenshot3.png)
-![bjornulf xtts](screenshots/screenshot4.png)\
-![bjornulf voices](screenshots/screenshot6.png)
+![emiguru xtts](screenshots/screenshot4.png)\
+![emiguru voices](screenshots/screenshot6.png)
 
 ### 3 - 🌈 Custom Backgrounds
 
 🎨 Use your own images as background.\
 The custom background image based on session id, just use a .png with session id name, from your url.\
 Just check the URL of the lobe-chat, and use the session id as the name of the image.\
-Example for `http://localhost:3210/chat?agent=&session=ssn_W6hB1fM2y4fK`, image should be `public/Bjornulf_backgrounds/ssn_W6hB1fM2y4fK.png`\
+Example for `http://localhost:3210/chat?agent=&session=ssn_W6hB1fM2y4fK`, image should be `public/Emiguru_backgrounds/ssn_W6hB1fM2y4fK.png`\
 ⚠ Require restart to take effect ⚠\
 ![Background](screenshots/screenshot2.png)
 
@@ -84,8 +84,8 @@ Tested with Node v21.7.0, bun 1.0.30. (So you can `nvm install v21.7.0` for exam
 Choose where to download the project, and then install it there :
 
 ```
-git clone https://github.com/justUmen/Bjornulf_lobe-chat
-cd Bjornulf_lobe-chat
+git clone https://github.com/justUmen/Emiguru_lobe-chat
+cd Emiguru_lobe-chat
 bun install
 bun run build
 ```
@@ -100,8 +100,8 @@ And the server should be running on `http://localhost:3210`, use the browser of 
 
 ## Details :
 
-- Can use my JSON workflows in the `public/Bjornulf_API/` folder to send to the ComfyUI, like for example `sd15.json` (Warning : You need to launch it manually at least one time before using it in lobe-chat.
-- It is using a link `output/BJORNULF_API_LAST_IMAGE.png` created by my custom node comfyui, that need to be used in the workflow. The generated image is then copied using this link to the `public/generated/` folder inside lobe-chat.
+- Can use my JSON workflows in the `public/Emiguru_API/` folder to send to the ComfyUI, like for example `sd15.json` (Warning : You need to launch it manually at least one time before using it in lobe-chat.
+- It is using a link `output/EMIGURU_API_LAST_IMAGE.png` created by my custom node comfyui, that need to be used in the workflow. The generated image is then copied using this link to the `public/generated/` folder inside lobe-chat.
 
 ## Configuration :
 
@@ -223,7 +223,7 @@ wget https://dl.min.io/server/minio/release/linux-amd64/minio
 You might also want to put minio bucket PUBLIC, so you can access the files without authentication.
 
 ```
-./minio server /home/umen/SyNc/Forks/Bjornulf_lobe-chat/public/S3_minio/ --console-address ":9001"
+./minio server /home/umen/SyNc/Forks/Emiguru_lobe-chat/public/S3_minio/ --console-address ":9001"
 ```
 
 # Example of configuration .env file in the root of your project for local database : (Of course replace by your own secret/id, these are fakes.)
@@ -288,7 +288,7 @@ I use lobe-chat + minio together on an icon with a .desktop file : `lobe-chat-mi
 [Desktop Entry]
 Name=lobe-chat-minio
 Comment=lobe-chat-minio
-Exec=kitty --class "kitty_lobechat" --title "kitty - lobe-chat" zsh -i -c '/home/umen/Downloads/minio server /home/umen/SyNc/Forks/Bjornulf_lobe-chat/public/S3_minio/ --console-address ":9001" & cd /home/umen/SyNc/Forks/Bjornulf_lobe-chat && bun run start || read'
+Exec=kitty --class "kitty_lobechat" --title "kitty - lobe-chat" zsh -i -c '/home/umen/Downloads/minio server /home/umen/SyNc/Forks/Emiguru_lobe-chat/public/S3_minio/ --console-address ":9001" & cd /home/umen/SyNc/Forks/Emiguru_lobe-chat && bun run start || read'
 Icon=/home/umen/Pictures/icons/lobe-chat.webp
 Terminal=false
 Type=Application
@@ -302,7 +302,7 @@ I keep XTTS separate, because I don't want to use VRAM if i don't plan on using 
 [Desktop Entry]
 Name=xtts_server
 Comment=xtts_server
-Exec=kitty --class "kitty_xtts" --title "kitty - xtts" zsh -i -c 'source /home/umen/venv/xtts/bin/activate && cd /home/umen/SyNc/Forks/xtts-api-server/xtts_api_server/ && python bjornulf_xtts_server.py || read'
+Exec=kitty --class "kitty_xtts" --title "kitty - xtts" zsh -i -c 'source /home/umen/venv/xtts/bin/activate && cd /home/umen/SyNc/Forks/xtts-api-server/xtts_api_server/ && python emiguru_xtts_server.py || read'
 Icon=/home/umen/Pictures/icons/speaker.svg
 Terminal=false
 Type=Application
@@ -316,7 +316,7 @@ StartupWMClass=kitty_xtts
 
 - I also have all my terminals running in a separate workspace, so they don't clutter my environment.
 
-- On my computer CUDA has issues after hibernation, so I just restart my computer. So i just disable hibernation for `bjornulf_xtts_server.py` with something like that : `systemd-inhibit --what=sleep --who="bjornulf app" --why="Preventing sleep" --mode=block python bjornulf_xtts_server.py`
+- On my computer CUDA has issues after hibernation, so I just restart my computer. So i just disable hibernation for `emiguru_xtts_server.py` with something like that : `systemd-inhibit --what=sleep --who="emiguru app" --why="Preventing sleep" --mode=block python emiguru_xtts_server.py`
 
 - What about PostgreSQL ?\
   For me PostgreSQL is running all the time, just run once `sudo systemctl enable postgresql` and `sudo systemctl start postgresql`.\

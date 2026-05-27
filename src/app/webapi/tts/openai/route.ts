@@ -35,11 +35,11 @@ export const POST = async (req: Request) => {
   const payload = (await req.json()) as OpenAITTSPayload;
   console.log('TTS payload.input :', payload.input);
 
-  if (payload.options.model === 'bjornulf_xtts') {
+  if (payload.options.model === 'emiguru_xtts') {
     return await xtts_tts_stream(
       payload.input,
-      payload.options.bjornulf_selected_language,
-      payload.options.bjornulf_selected_voice,
+      payload.options.emiguru_selected_language,
+      payload.options.emiguru_selected_voice,
     );
   }
 

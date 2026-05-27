@@ -43,8 +43,8 @@ export const useTTS = (content: string, config?: TTSConfig) => {
           serviceUrl: API_ENDPOINTS.tts,
         },
         options: {
-          bjornulf_selected_language: getLanguageFromStorage(),
-          bjornulf_selected_voice: getSpeakerFromStorage(),
+          emiguru_selected_language: getLanguageFromStorage(),
+          emiguru_selected_voice: getSpeakerFromStorage(),
           model: ttsSettings.openAI.ttsModel,
           voice: config?.voice || voice,
         },

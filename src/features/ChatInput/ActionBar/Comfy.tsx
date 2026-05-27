@@ -10,7 +10,7 @@ import { chatSelectors } from '@/store/chat/selectors';
 import { useUserStore } from '@/store/user';
 import { keyVaultsConfigSelectors } from '@/store/user/selectors';
 
-import BjornulfVoices from './BjornulfVoices';
+import EmiguruVoices from './EmiguruVoices';
 
 // import { Ollama as OllamaBrowser } from 'ollama/browser';
 // import { ollamaService } from '@/services/ollama';
@@ -37,7 +37,7 @@ interface PromptData {
 
 // Helper Functions
 // const pollForImage = async () => {
-//   const baseImageUrl = COMFYUI_URL + '/view?filename=output/BJORNULF_API_LAST_IMAGE.png';
+//   const baseImageUrl = COMFYUI_URL + '/view?filename=output/EMIGURU_API_LAST_IMAGE.png';
 //   let previousImageHash = null;
 //   let retries = 0;
 //   const maxRetries = 300;
@@ -160,7 +160,7 @@ const Comfy = memo(() => {
 
   const fetchPromptData = useCallback(() => {
     console.log(apiUrl);
-    fetch('Bjornulf_API/' + apiUrl + '.json')
+    fetch('Emiguru_API/' + apiUrl + '.json')
       .then((response) => response.json())
       .then((data) => {
         setPromptData(data as PromptData);
@@ -204,11 +204,11 @@ const Comfy = memo(() => {
         });
       }
 
-      // Set the text input by finding the object with "BJORNULF_LOBECHAT_PROMPT"
+      // Set the text input by finding the object with "EMIGURU_LOBECHAT_PROMPT"
       const textInputKey = Object.keys(updatedPromptData).find(
         (key) =>
           updatedPromptData[key].inputs &&
-          updatedPromptData[key].inputs.text === 'BJORNULF_LOBECHAT_PROMPT',
+          updatedPromptData[key].inputs.text === 'EMIGURU_LOBECHAT_PROMPT',
       );
 
       if (textInputKey) {
@@ -269,7 +269,7 @@ const Comfy = memo(() => {
   // Render
   return (
     <div style={{ alignItems: 'center', display: 'flex' }}>
-      <BjornulfVoices
+      <EmiguruVoices
         isLoading={false}
         onLanguageSelect={(language) => console.log('Selected language:', language)}
         onVoiceSelect={(voice) => console.log('Selected voice:', voice)}
@@ -278,31 +278,31 @@ const Comfy = memo(() => {
         icon={Trash}
         onClick={() => freeVramOllama()}
         style={{ marginLeft: '10px' }}
-        title={`[Bjornulf] Free Ollama VRAM (${agentSelectors.currentAgentModel(useAgentStore.getState())})`}
+        title={`[Emiguru] Free Ollama VRAM (${agentSelectors.currentAgentModel(useAgentStore.getState())})`}
       />
       <ActionIcon
         icon={Camera}
         loading={isLoading}
         onClick={sendToComfyUI}
-        title={isLoading ? 'Sending...' : '[Bjornulf] Send to Comfyui API'}
+        title={isLoading ? 'Sending...' : '[Emiguru] Send to Comfyui API'}
       />
       <ActionIcon
         icon={Settings}
         onClick={() => setShowApiSelect(true)}
         style={{ marginLeft: '10px' }}
-        title="[Bjornulf] Comfyui : Select workflow JSON"
+        title="[Emiguru] Comfyui : Select workflow JSON"
       />
       <Modal
         footer={null}
         onCancel={() => setShowApiSelect(false)}
         open={showApiSelect}
-        title="[Bjornulf] workflows in public/Bjornulf_API"
+        title="[Emiguru] workflows in public/Emiguru_API"
         width={400}
       >
         <Select
           onChange={handleApiChange}
           options={availableApis.map((api) => ({ label: api + '.json', value: api }))}
-          placeholder="[Bjornulf] Select workflow JSON"
+          placeholder="[Emiguru] Select workflow JSON"
           style={{ width: '100%' }}
           value={apiUrl}
         />
@@ -314,7 +314,7 @@ const Comfy = memo(() => {
 export default Comfy;
 
 //GIVE UP ON THAT... USE THIS HACK IN NODE INSTEAD (included in lobechat save image)
-// const freeVramHackPromptBody = '{ prompt: {"3":{"inputs":{"text":"free VRAM hack"},"class_type":"Bjornulf_WriteText","_meta":{"title":"✒ Write Text"}},"4":{"inputs":{"text_value":["3",0],"text":"free VRAM hack"},"class_type":"Bjornulf_ShowText","_meta":{"title":"👁 Show (Text)"}}} }';
+// const freeVramHackPromptBody = '{ prompt: {"3":{"inputs":{"text":"free VRAM hack"},"class_type":"Emiguru_WriteText","_meta":{"title":"✒ Write Text"}},"4":{"inputs":{"text_value":["3",0],"text":"free VRAM hack"},"class_type":"Emiguru_ShowText","_meta":{"title":"👁 Show (Text)"}}} }';
 // await fetch(COMFYUI_URL + '/prompt', {
 //   body: freeVramHackPromptBody,
 //   headers: {
@@ -323,4 +323,4 @@ export default Comfy;
 //   method: 'POST',
 // });
 //Free ram hack :
-// curl -X POST http://localhost:8188/prompt -H "Content-Type: application/json" -d '{"prompt":{"3":{"inputs":{"text":"free VRAM hack"},"class_type":"Bjornulf_WriteText","_meta":{"title":"✒ Write Text"}},"4":{"inputs":{"text_value":["3",0],"text":"free VRAM hack"},"class_type":"Bjornulf_ShowText","_meta":{"title":"👁 Show (Text)"}}}}'
+// curl -X POST http://localhost:8188/prompt -H "Content-Type: application/json" -d '{"prompt":{"3":{"inputs":{"text":"free VRAM hack"},"class_type":"Emiguru_WriteText","_meta":{"title":"✒ Write Text"}},"4":{"inputs":{"text_value":["3",0],"text":"free VRAM hack"},"class_type":"Emiguru_ShowText","_meta":{"title":"👁 Show (Text)"}}}}'

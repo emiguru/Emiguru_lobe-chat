@@ -39,14 +39,14 @@ export const useCustomActions = () => {
     label: 'Comfy',
   } as ActionIconGroupItems;
 
-  const bjornulf_voices = {
+  const emiguru_voices = {
     icon: Speaker,
-    key: 'bjornulf_voices',
-    label: 'bjornulf_voices',
+    key: 'emiguru_voices',
+    label: 'emiguru_voices',
   } as ActionIconGroupItems;
 
   return useMemo(
-    () => ({ bjornulf_voices, comfy, translate, tts }),
-    [bjornulf_voices, comfy, translate, tts],
+    () => ({ emiguru_voices, comfy, translate, tts }),
+    [emiguru_voices, comfy, translate, tts],
   );
 };

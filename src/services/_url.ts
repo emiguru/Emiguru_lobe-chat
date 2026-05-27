@@ -46,7 +46,7 @@ export const API_ENDPOINTS = mapWithBasePath({
   edge: '/webapi/tts/edge',
   microsoft: '/webapi/tts/microsoft',
 
-  // //Bjornulf save-image
+  // //Emiguru save-image
   saveimage: '/api/save-image',
 });
 
@@ -56,5 +56,5 @@ export const API_ENDPOINTS = mapWithBasePath({
 // edge: '/api/tts/edge-speech',
 // microsoft: '/api/tts/microsoft-speech',
 
-// //Bjornulf save-image
+// //Emiguru save-image
 // saveimage: '/api/save-image',

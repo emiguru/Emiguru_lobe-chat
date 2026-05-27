@@ -6,7 +6,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
   console.log('GET request received:', request);
-  const apiDirectory = path.join(process.cwd(), 'public', 'Bjornulf_API');
+  const apiDirectory = path.join(process.cwd(), 'public', 'Emiguru_API');
   let jsonFiles: string[] = [];
 
   try {

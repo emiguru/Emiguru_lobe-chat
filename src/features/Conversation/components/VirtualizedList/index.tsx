@@ -115,7 +115,7 @@ const VirtualizedList = memo<VirtualizedListProps>(({ mobile }) => {
         ref={virtuosoRef}
         style={{
           backgroundAttachment: 'fixed',
-          backgroundImage: `url(${sessionId ? `Bjornulf_backgrounds/${sessionId}.png` : 'none'})`,
+          backgroundImage: `url(${sessionId ? `Emiguru_backgrounds/${sessionId}.png` : 'none'})`,
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'auto 100%',

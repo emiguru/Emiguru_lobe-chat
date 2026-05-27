@@ -168,9 +168,9 @@
     "owned_by": "openai"
   },
   {
-    "id": "bjornulf_xtts",
+    "id": "emiguru_xtts",
     "object": "model",
     "created": 1686588897,
-    "owned_by": "bjornulf"
+    "owned_by": "emiguru"
   }
 ]

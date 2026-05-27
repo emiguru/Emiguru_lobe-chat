@@ -13,8 +13,8 @@ export const opeanaiTTSOptions: SelectProps['options'] = [
     value: 'tts-1-hd',
   },
   {
-    label: 'bjornulf_xtts',
-    value: 'bjornulf_xtts',
+    label: 'emiguru_xtts',
+    value: 'emiguru_xtts',
   },
 ];
 

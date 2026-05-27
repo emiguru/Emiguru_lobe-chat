@@ -86,14 +86,14 @@
     "inputs": {
       "image": ["8", 0]
     },
-    "class_type": "Bjornulf_SaveBjornulfLobeChat",
+    "class_type": "Emiguru_SaveEmiguruLobeChat",
     "_meta": {
-      "title": "🖼💬 Save image for Bjornulf LobeChat"
+      "title": "🖼💬 Save image for Emiguru LobeChat"
     }
   },
   "49": {
     "inputs": {
-      "text": "BJORNULF_LOBECHAT_PROMPT",
+      "text": "EMIGURU_LOBECHAT_PROMPT",
       "clip": ["26:0", 0]
     },
     "class_type": "CLIPTextEncode",

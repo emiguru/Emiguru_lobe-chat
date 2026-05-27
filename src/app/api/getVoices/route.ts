@@ -35,7 +35,7 @@ export const dynamic = 'force-dynamic';
 
 export async function GET(request: NextRequest) {
   console.log('GET request received:', request);
-  const voicesDirectory = path.join(process.cwd(), 'public', 'bjornulf_voices');
+  const voicesDirectory = path.join(process.cwd(), 'public', 'emiguru_voices');
   // console.log('Voices directory:', voicesDirectory);
 
   const voices: VoiceMap = {};

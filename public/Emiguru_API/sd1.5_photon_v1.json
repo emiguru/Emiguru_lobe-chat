@@ -1,7 +1,7 @@
 {
   "47": {
     "inputs": {
-      "ckpt_name": "SDXL/dreamshaperXL_alpha2Xl10.safetensors"
+      "ckpt_name": "SD1.5/photon_v1.safetensors"
     },
     "class_type": "CheckpointLoaderSimple",
     "_meta": {
@@ -10,10 +10,10 @@
   },
   "48": {
     "inputs": {
-      "seed": 233358242971409,
-      "steps": 30,
-      "cfg": 7,
-      "sampler_name": "euler_ancestral",
+      "seed": 933397385572250,
+      "steps": 20,
+      "cfg": 8,
+      "sampler_name": "euler",
       "scheduler": "normal",
       "denoise": 1,
       "model": ["47", 0],
@@ -28,7 +28,7 @@
   },
   "49": {
     "inputs": {
-      "text": "BJORNULF_LOBECHAT_PROMPT",
+      "text": "EMIGURU_LOBECHAT_PROMPT",
       "clip": ["47", 1]
     },
     "class_type": "CLIPTextEncode",
@@ -38,7 +38,7 @@
   },
   "50": {
     "inputs": {
-      "text": "3d, cartoon, anime, sketches, (worst quality, bad quality, child, cropped:1.4) ((monochrome)), ((grayscale)), (rating_safe), (score_3_up, score_4_up, score_5_up, monochrome, vector art, blurry)",
+      "text": "",
       "clip": ["47", 1]
     },
     "class_type": "CLIPTextEncode",
@@ -48,8 +48,8 @@
   },
   "51": {
     "inputs": {
-      "width": 1024,
-      "height": 1024,
+      "width": 512,
+      "height": 512,
       "batch_size": 1
     },
     "class_type": "EmptyLatentImage",
@@ -71,18 +71,9 @@
     "inputs": {
       "image": ["52", 0]
     },
-    "class_type": "Bjornulf_SaveBjornulfLobeChat",
+    "class_type": "Emiguru_SaveEmiguruLobeChat",
     "_meta": {
-      "title": "🖼💬 Save image for Bjornulf LobeChat"
-    }
-  },
-  "62": {
-    "inputs": {
-      "images": ["52", 0]
-    },
-    "class_type": "PreviewImage",
-    "_meta": {
-      "title": "Preview Image"
+      "title": "🖼💬 Save image for Emiguru LobeChat"
     }
   }
 }

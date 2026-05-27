@@ -42,15 +42,15 @@ export const xtts_tts_to_audio = async (input: string): Promise<Response> => {
 
 export const xtts_tts_stream = async (
   input: string,
-  bjornulf_selected_language: string,
-  bjornulf_selected_voice: string,
+  emiguru_selected_language: string,
+  emiguru_selected_voice: string,
 ): Promise<Response> => {
   const xttsBaseUrl = 'http://localhost:8020/tts_stream';
 
   try {
     const params = new URLSearchParams({
-      language: bjornulf_selected_language,
-      speaker_wav: bjornulf_selected_language + '/' + bjornulf_selected_voice,
+      language: emiguru_selected_language,
+      speaker_wav: emiguru_selected_language + '/' + emiguru_selected_voice,
       text: input,
     });
 

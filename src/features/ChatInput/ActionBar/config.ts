@@ -10,7 +10,7 @@ import Tools from './Tools';
 import Upload from './Upload';
 
 export const actionMap = {
-  // bjornulfVoices: BjornulfVoices,
+  // emiguruVoices: EmiguruVoices,
   clear: Clear,
   comfy: Comfy,
   fileUpload: Upload,
@@ -40,7 +40,7 @@ export const getLeftActionList: getActionList = (mobile) =>
     !mobile && 'stt',
     'tools',
     'token',
-    // 'bjornulfVoices',
+    // 'emiguruVoices',
   ].filter(Boolean) as ActionKeys[];
 
 export const getRightActionList: getActionList = () =>

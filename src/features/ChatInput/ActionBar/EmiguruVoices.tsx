@@ -3,9 +3,9 @@ import { Select } from 'antd';
 import { Pause, Play, Speaker } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
-import './BjornulfVoices.css';
+import './EmiguruVoices.css';
 
-interface BjornulfVoicesProps {
+interface EmiguruVoicesProps {
   isLoading?: boolean;
   onLanguageSelect?: (selected: string) => void;
   onVoiceSelect?: (selected: string) => void;
@@ -35,7 +35,7 @@ const languageMap: { [key: string]: string } = {
   'zh-cn': 'Chinese',
 };
 
-const BjornulfVoices: React.FC<BjornulfVoicesProps> = ({
+const EmiguruVoices: React.FC<EmiguruVoicesProps> = ({
   isLoading = false,
   onLanguageSelect,
   onVoiceSelect,
@@ -141,7 +141,7 @@ const BjornulfVoices: React.FC<BjornulfVoicesProps> = ({
         icon={Speaker}
         loading={isLoading}
         onClick={() => setIsOpen(true)}
-        title={isLoading ? 'Loading voices...' : '[Bjornulf] Select a voice'}
+        title={isLoading ? 'Loading voices...' : '[Emiguru] Select a voice'}
       />
       <Modal
         footer={
@@ -159,7 +159,7 @@ const BjornulfVoices: React.FC<BjornulfVoicesProps> = ({
         onCancel={handleModalClose}
         open={isOpen}
         style={{ maxHeight: '90vh', overflow: 'hidden' }}
-        title="[Bjornulf] Select a Voice"
+        title="[Emiguru] Select a Voice"
         width={400}
       >
         <div className="language-select mb-4">
@@ -193,7 +193,7 @@ const BjornulfVoices: React.FC<BjornulfVoicesProps> = ({
                 <audio
                   id={`audio-${voice}`}
                   onEnded={() => setPlayingAudio(null)}
-                  src={`/bjornulf_voices/${selectedLanguage}/${voice}.wav`}
+                  src={`/emiguru_voices/${selectedLanguage}/${voice}.wav`}
                 />
               </div>
             ))
@@ -206,4 +206,4 @@ const BjornulfVoices: React.FC<BjornulfVoicesProps> = ({
   );
 };
 
-export default BjornulfVoices;
+export default EmiguruVoices;
